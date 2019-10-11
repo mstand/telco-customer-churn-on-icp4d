@@ -1,29 +1,29 @@
-# Predict Customer Churn using Watson Machine Learning and Jupyter Notebooks on Cloud Pak for Data
+# Predict Customer Churn using Watson Machine Learning and Jupyter Notebooks on IBM Cloud Pak for Data
 
-In this Code Pattern, we use IBM Cloud Pak for Data (ICP4D) to go through the whole data science pipeline to solve a business problem and predict customer churn using a Telco customer churn dataset. Cloud Pak for Data is an interactive, collaborative, cloud-based environment where data scientists, developers, and others interested in data science can use tools (e.g., RStudio, Jupyter Notebooks, Spark, etc.) to collaborate, share, and gather insight from their data as well as build and deploy machine learning and deep learning models.
+In this Code Pattern, we use IBM Cloud Pak for Data to go through the whole data science pipeline to solve a business problem and predict customer churn using a Telco customer churn dataset. IBM Cloud Pak for Data is an interactive, collaborative, cloud-based environment where data scientists, developers, and others interested in data science can use tools (e.g., RStudio, Jupyter Notebooks, Spark, etc.) to collaborate, share, and gather insight from their data as well as build and deploy machine learning and deep learning models.
 
 When the reader has completed this Code Pattern, they will understand how to:
 
 * Use [Jupyter Notebooks](https://jupyter.org/) to load, visualize, and analyze data
 * Run Notebooks in [IBM Cloud Pak for Data](https://www.ibm.com/analytics/cloud-pak-for-data)
-* Build, test and deploy a machine learning model using [Spark MLib](https://spark.apache.org/mllib/) on ICP4D.
-* Deploy a selected machine learning model to production using Cloud Pak for Data
+* Build, test and deploy a machine learning model using [Spark MLib](https://spark.apache.org/mllib/) on IBM Cloud Pak for Data.
+* Deploy a selected machine learning model to production using IBM Cloud Pak for Data
 * Create a front-end application to interface with the client and start consuming your deployed model.
 
 ![architecture diagram](doc/source/images/architecture.png)
 
 ## Flow
 
-1. User loads the Jupyter notebook into the Cloud Pak for Data (CP4D) platform.
-1. [Telco customer churn data set](https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv)  is loaded into the Jupyter Notebook, either directly from the github repo, or as [Virtualized Data] after following the [Data Virtualization Tutorial]() from the [IBM Cloud Pak for Data Learning Path]().
-1. Preprocess the data, build machine learning models and save to Watson Machine Learning on CP4D.
-1. Deploy a selected machine learning model into production on the CP4D platform and obtain a scoring endpoint.
+1. User loads the Jupyter notebook into the Cloud Pak for Data platform.
+1. [Telco customer churn data set](https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv)  is loaded into the Jupyter Notebook, either directly from the github repo, or as [Virtualized Data] after following the [Data Virtualization Tutorial](https://developer.ibm.com/tutorials/virtualizing-db2-warehouse-data-with-data-virtualization) from the [IBM Cloud Pak for Data Learning Path](https://developer.ibm.com//series/cloud-pak-for-data-learning-path/).
+1. Preprocess the data, build machine learning models and save to Watson Machine Learning on IBM Cloud Pak for Data.
+1. Deploy a selected machine learning model into production on the IBM Cloud Pak for Data platform and obtain a scoring endpoint.
 1. Use the model for credit prediction using a frontend application.
 
 ## Included components
 
 * [IBM Cloud Pak for Data]
-* [Watson Machine Learning Add On for ICP4D]
+* [Watson Machine Learning Add On for IBM Cloud Pak for Data]
 
 ## Featured technologies
 
@@ -35,13 +35,13 @@ When the reader has completed this Code Pattern, they will understand how to:
 ## Prerequisites
 
 * [IBM Cloud Pak for Data](https://www.ibm.com/analytics/cloud-pak-for-data)
-* [Watson Machine Learning Add On for ICP4D](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/com.ibm.icpdata.doc/zen/admin/add-ons.html#add-ons__ai)
+* [Watson Machine Learning Add On for IBM Cloud Pak for Data](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/com.ibm.icpdata.doc/zen/admin/add-ons.html#add-ons__ai)
 
 # Steps
 
 1. [Create a new Project](#1-create-a-new-project)
-1. [Upload the dataset](#2-upload-the-dataset) if you are not on the [ICP4D Learning Path]().
-1. [Import notebook to Cloud Pak for Data](#3-import-notebook-to-cloud-pak-for-data)
+1. [Upload the dataset](#2-upload-the-dataset) if you are not on the [IBM Cloud Pak for Data Learning Path](https://developer.ibm.com//series/cloud-pak-for-data-learning-path/).
+1. [Import notebook to IBM Cloud Pak for Data](#3-import-notebook-to-cloud-pak-for-data)
 1. [Import dataset into the notebook](#4-import-dataset-into-the-notebook)
 1. [Follow the steps in the notebook](#5-follow-the-steps-in-the-notebook)
 1. [Create a project release](#6-create-a-project-release)
@@ -67,7 +67,7 @@ Create a new project, choose `Analytics project`, give it a unique name, and cli
 
 ## 2. Upload the dataset
 
-If you are not on the [ICP4D Learning Path], which uses Virtualized Data, upload the dataset into your project now.
+If you are not on the [IBM Cloud Pak for Data Learning Path](https://developer.ibm.com//series/cloud-pak-for-data-learning-path/), which uses Virtualized Data, upload the dataset into your project now.
 
 Clone this repository:
 
@@ -145,7 +145,7 @@ Section `4.0 Save the model` will save the model to your project. Update the `MO
 MODEL_NAME = "user123 customer churn model"
 ```
 
-Continue to run the remaining cells in the section to save the model to Cloud Pak for Data. We'll be able to test it out with the Cloud Pak for Data tools in just a few minutes!
+Continue to run the remaining cells in the section to save the model to IBM Cloud Pak for Data. We'll be able to test it out with the Cloud Pak for Data tools in just a few minutes!
 
 ## 6. Create a project release
 
@@ -219,7 +219,7 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 
 ### Test the saved model with built-in tooling
 
-Once the model is enabled we can test the API interface from Cloud Pak for Data. In your deployment, choose the *Deployments* tab and click the enabled model deployment. From the *API* tab, default values are given and we can simply click the *Submit* button. The results are shown on the right.
+Once the model is enabled we can test the API interface from IBM Cloud Pak for Data. In your deployment, choose the *Deployments* tab and click the enabled model deployment. From the *API* tab, default values are given and we can simply click the *Submit* button. The results are shown on the right.
 
 ![Testing the deployed model](doc/source/images/testing-1-api.png)
 
